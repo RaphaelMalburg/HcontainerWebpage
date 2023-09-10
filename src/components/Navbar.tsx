@@ -44,12 +44,12 @@ const NavBar = () => {
         </ul>
         <div className="md:hidden mr-3 md:mr-0 col-start-6 col-span-1 order-1 md:order-none">
           <button onClick={toggleMenu}>
-            <FiMenu className="w-10 h-10 text-gray-700" />
+            <FiMenu className="w-10 h-10 text-gray-700 dark:text-gray-400" />
           </button>
         </div>
         <div className="absolute md:top-14 right-10 top-[110px]">
           <button onClick={() => setColorMode(colorMode === "light" ? "dark" : "light")}>
-            {colorMode == "dark" ? <BsFillMoonFill className="w-10 h-10 text-gray-700" /> : <BsFillSunFill className="w-10 h-10 text-gray-200" />}
+            {colorMode == "dark" ? <BsFillMoonFill className="w-10 h-10 text-gray-400" /> : <BsFillSunFill className="w-10 h-10 text-gray-800" />}
           </button>
         </div>
       </nav>
