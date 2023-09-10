@@ -17,7 +17,7 @@ export function FormFooter() {
     console.log(values);
   }
   return (
-    <section className=" w-2/3 mx-auto ">
+    <section className="md:pb-0 pb-10 md:w-2/3 mx-auto w-full  ">
       <h1 className="text-2xl font-bold text-primary-blue pb-4">Receba as novidades:</h1>
 
       <Form {...form}>
@@ -35,7 +35,7 @@ export function FormFooter() {
               </FormItem>
             )}
           />
-          <Button type="submit" className="  w-36 bg-secondary-orange col-span-1  self-end  justify-self-start">
+          <Button type="submit" className="  md:w-36 bg-secondary-orange col-span-1  self-end  justify-self-start">
             Enviar
           </Button>
         </form>
