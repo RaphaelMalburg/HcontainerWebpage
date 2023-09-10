@@ -27,7 +27,7 @@ export function FormFooter() {
             name="email"
             render={({ field }) => (
               <FormItem className=" col-span-2">
-                <FormLabel>Email</FormLabel>
+                <FormLabel className="dark:text-primary-blue-100">Email</FormLabel>
                 <FormControl>
                   <Input placeholder="Seu Email aqui" {...field} />
                 </FormControl>

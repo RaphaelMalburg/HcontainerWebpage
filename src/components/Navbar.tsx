@@ -18,8 +18,8 @@ const NavBar = () => {
   };
   const [colorMode, setColorMode] = useColorMode();
   return (
-    <header className="w-full  absolute z-10">
-      <nav className="max-w-[1440px] mx-auto flex justify-between items-center sm:px-16 px-6 py-4 bg-transparent">
+    <header className="w-full  absolute z-10 ">
+      <nav className="max-w-[1440px] mx-auto flex justify-between items-center  sm:px-16 px-6 py-4 bg-transparent">
         <Link href="/" className="flex justify-center items-center ">
           <Image src="/logoname1.png" alt="logo" width={198} height={40} className="object-contain " />
         </Link>
@@ -47,7 +47,7 @@ const NavBar = () => {
             <FiMenu className="w-10 h-10 text-gray-700" />
           </button>
         </div>
-        <div className="absolute top-14 right-10">
+        <div className="absolute md:top-14 right-10 top-[110px]">
           <button onClick={() => setColorMode(colorMode === "light" ? "dark" : "light")}>
             {colorMode == "dark" ? <BsFillMoonFill className="w-10 h-10 text-gray-700" /> : <BsFillSunFill className="w-10 h-10 text-gray-200" />}
           </button>

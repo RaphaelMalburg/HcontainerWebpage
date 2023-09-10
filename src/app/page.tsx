@@ -7,12 +7,12 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className=" overflow-x-hidden dark:bg-black-100">
+    <main className=" overflow-x-hidden dark:bg-black-100 transition-all ease-in-out duration-300">
       <Hero />
       <ContainerTypes />
       <About />
       <XPContainer />
-      <div className=" bg-gray-200/50 dark:bg-dark-100 py-10">
+      <div className=" bg-gray-200/50 dark:bg-gray-900 py-10">
         <FormHome />
       </div>
       <Footer />

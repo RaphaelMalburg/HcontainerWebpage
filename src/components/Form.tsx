@@ -18,8 +18,10 @@ export function FormHome() {
   }
   return (
     <section className=" w-2/3 mx-auto  mt-10">
-      <h1 className="text-5xl font-bold text-center">Em que podemos lhe ajudar?</h1>
-      <h3 className="pt-4 md:mx-40 text-center">Estamos prontos para trabalhar em projetos de qualquer complexidade, seja containers sem modificação ou projetos exclusivos.</h3>
+      <h1 className="text-5xl font-bold text-center dark:text-primary-blue-100">Em que podemos lhe ajudar?</h1>
+      <h3 className="pt-4 md:mx-40 text-center dark:text-primary-blue-100">
+        Estamos prontos para trabalhar em projetos de qualquer complexidade, seja containers sem modificação ou projetos exclusivos.
+      </h3>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="gap-4 grid md:grid-cols-2 grid-cols-1 mt-10">
           <FormField
@@ -27,7 +29,7 @@ export function FormHome() {
             name="name"
             render={({ field }) => (
               <FormItem className=" md:col-span-1 ">
-                <FormLabel>Nome</FormLabel>
+                <FormLabel className="dark:text-primary-blue-100">Nome</FormLabel>
                 <FormControl>
                   <Input placeholder="Seu nome" {...field} />
                 </FormControl>
@@ -41,7 +43,7 @@ export function FormHome() {
             name="phone"
             render={({ field }) => (
               <FormItem className=" md:col-span-1 col-span-2">
-                <FormLabel>Telefone</FormLabel>
+                <FormLabel className="dark:text-primary-blue-100">Telefone</FormLabel>
                 <FormControl>
                   <Input placeholder="Seu número de contato" {...field} />
                 </FormControl>
@@ -55,7 +57,7 @@ export function FormHome() {
             name="email"
             render={({ field }) => (
               <FormItem className=" col-span-2">
-                <FormLabel>Email</FormLabel>
+                <FormLabel className="dark:text-primary-blue-100">Email</FormLabel>
                 <FormControl>
                   <Input placeholder="Seu Email" {...field} />
                 </FormControl>
@@ -68,7 +70,7 @@ export function FormHome() {
             name="message"
             render={({ field }) => (
               <FormItem className=" col-span-2 row-span-3">
-                <FormLabel>Digite aqui sua mensagem</FormLabel>
+                <FormLabel className="dark:text-primary-blue-100">Digite aqui sua mensagem</FormLabel>
                 <FormControl className="h-40">
                   <Input placeholder="Mensagem" {...field} />
                 </FormControl>
