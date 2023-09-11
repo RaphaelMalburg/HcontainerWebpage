@@ -8,13 +8,53 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
 import { homeFormSchema } from "@/lib/validations/form-home";
+import { Textarea } from "./ui/textarea";
+import emailjs from "@emailjs/browser";
+import { useRef, useState } from "react";
+
+//import { useForm as useFormSpree } from "@formspree/react";
 
 export function FormHome() {
   const form = useForm<z.infer<typeof homeFormSchema>>({
     resolver: zodResolver(homeFormSchema),
   });
+  const clearFormFields = () => {
+    form.setValue("name", "");
+    form.setValue("email", "");
+    form.setValue("phone", "");
+    form.setValue("message", "");
+  };
   function onSubmit(values: z.infer<typeof homeFormSchema>) {
+    const formElement = document.createElement("form");
+    formElement.style.display = "none";
+
+    for (const key in values) {
+      if (values.hasOwnProperty(key)) {
+        const inputElement = document.createElement("input");
+        inputElement.type = "text"; // You can set the correct type here
+        inputElement.name = key;
+        inputElement.value = values[key];
+        formElement.appendChild(inputElement);
+      }
+    }
+
+    document.body.appendChild(formElement);
+
+    // Append the form element to the document body
+    document.body.appendChild(formElement);
+    console.log(formElement);
     console.log(values);
+    emailjs.sendForm(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, formElement, process.env.NEXT_PUBLIC_PUBLIC_KEY).then(
+      (result) => {
+        console.log(result.text);
+        confirm("Confirmado");
+        clearFormFields();
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
+    clearFormFields();
   }
   return (
     <section className=" w-2/3 mx-auto  mt-10">
@@ -71,8 +111,8 @@ export function FormHome() {
             render={({ field }) => (
               <FormItem className=" col-span-2 row-span-3">
                 <FormLabel className="dark:text-primary-blue-100">Digite aqui sua mensagem</FormLabel>
-                <FormControl className="h-40">
-                  <Input placeholder="Mensagem" {...field} />
+                <FormControl>
+                  <Textarea placeholder="Mensagem" {...field} />
                 </FormControl>
 
                 <FormMessage />
