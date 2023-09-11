@@ -3,8 +3,8 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="flex xl:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto mt-8">
-      <div className="flex-1 pt-36 padding-x">
+    <section className="flex xl:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto ">
+      <div className="flex-1  padding-x">
         <h1 className="hero__title dark:text-primary-blue-100">Containers a sua medida</h1>
 
         <p className="hero__subtitle dark:text-primary-blue-100">Projetos personalizados são feitos, tais como banheiros, escritórios, casas e entre outros.</p>

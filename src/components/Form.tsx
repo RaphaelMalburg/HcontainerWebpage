@@ -7,7 +7,6 @@ import { useForm } from "react-hook-form";
 import { homeFormSchema } from "@/lib/validations/form-home";
 
 import emailjs from "@emailjs/browser";
-import { useRef, useState } from "react";
 
 type FormValues = z.infer<typeof homeFormSchema>;
 export function FormHome() {
@@ -17,10 +16,6 @@ export function FormHome() {
     reset,
     formState: { errors },
   } = useForm<FormValues>();
-
-  const service_id = process.env.NEXT_PUBLIC_SERVICE_ID;
-  const template_id = process.env.NEXT_PUBLIC_TEMPLATE_ID;
-  const user_id = process.env.NEXT_PUBLIC_PUBLIC_KEY;
 
   function onSubmit(values: z.infer<typeof homeFormSchema>) {
     // Create a hidden HTML form element
