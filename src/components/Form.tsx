@@ -18,9 +18,9 @@ export function FormHome() {
     formState: { errors },
   } = useForm<FormValues>();
 
-  const form = useForm<z.infer<typeof homeFormSchema>>({
-    resolver: zodResolver(homeFormSchema),
-  });
+  const service_id = process.env.NEXT_PUBLIC_SERVICE_ID;
+  const template_id = process.env.NEXT_PUBLIC_TEMPLATE_ID;
+  const user_id = process.env.NEXT_PUBLIC_PUBLIC_KEY;
 
   function onSubmit(values: z.infer<typeof homeFormSchema>) {
     // Create a hidden HTML form element
@@ -53,7 +53,7 @@ export function FormHome() {
 
     // Append the form element to the document body
     document.body.appendChild(formElement);
-    emailjs.sendForm(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, formElement, process.env.NEXT_PUBLIC_PUBLIC_KEY).then(
+    emailjs.sendForm(process.env.NEXT_PUBLIC_SERVICE_ID || "", process.env.NEXT_PUBLIC_TEMPLATE_ID || "", formElement, process.env.NEXT_PUBLIC_PUBLIC_KEY || "").then(
       (result) => {
         console.log(result.text);
         confirm("Confirmado");
