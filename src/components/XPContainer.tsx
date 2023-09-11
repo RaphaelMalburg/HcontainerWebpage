@@ -5,7 +5,7 @@ import Link from "next/link";
 const XPContainer = () => {
   return (
     <section className="relative grid md:grid-cols-3 w-full padding-x mt-20">
-      <div className="relative grid md:grid-cols-2 md:col-span-2  padding-x">
+      <div className="relative grid md:grid-cols-2 md:col-span-2  padding-x gap-4 md:gap-0">
         <div className=" md:col-span-2">
           <XPCard amount={"108"} description="Projetos Entregues" src="./file.svg" styles="-top-9 -left-9 z-index-10" />
         </div>
