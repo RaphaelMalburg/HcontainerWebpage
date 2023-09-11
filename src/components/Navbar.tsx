@@ -26,7 +26,7 @@ const NavBar = () => {
         <ul
           className={`md:items-center w-full absolute top-0 md:static ${
             menuOpen ? "block text-dark-100 text-2xl" : "hidden"
-          }  space-y-20 md:space-y-0 md:flex md:space-x-36  md:bg-transparent font-bold bg-primary-blue/70 text-md text-center  dark:text-primary-blue-100 lg:text-lg right-0  md:w-auto grid lg:gap-4  gap- place-content-center tracking-wider md:h-fit h-screen col-start-3  col-span-3 z-40 letter-shadow[&_li]:px-2`}
+          }  space-y-20 md:space-y-0 md:flex lg:space-x-36 md:space-x-16  md:bg-transparent font-bold bg-primary-blue/70 text-md text-center  dark:text-primary-blue-100 lg:text-lg right-0  md:w-auto grid lg:gap-4  gap- place-content-center tracking-wider md:h-fit h-screen col-start-3  col-span-3 z-40 letter-shadow [&_li]:px-2 pr-10`}
           onClick={toggleMenu}>
           <li className="hover:border-b-2 border-black dark:border-primary-blue-100">
             <Link href={"#sobre"} className="text-shadow">

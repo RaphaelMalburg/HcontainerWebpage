@@ -18,7 +18,7 @@ export function FormFooter() {
   }
   return (
     <section className="md:pb-0 pb-10 md:w-2/3 mx-auto w-full  ">
-      <h1 className="text-2xl font-bold text-primary-blue pb-4">Receba as novidades:</h1>
+      <h1 className="text-2xl font-bold text-primary-blue pb-4 dark:text-blue-400">Receba as novidades:</h1>
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="gap-4 grid grid-cols-3  ">
