@@ -1,5 +1,7 @@
 import NavBar from "../components/Navbar";
 import "./globals.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const metadata = {
   title: "HContainers",
@@ -13,6 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="relative">
         <NavBar />
         {children}
+        <ToastContainer position="top-right" autoClose={3000} />
       </body>
     </html>
   );

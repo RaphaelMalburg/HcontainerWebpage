@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import { homeFormSchema } from "@/lib/validations/form-home";
 
 import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
 
 type FormValues = z.infer<typeof homeFormSchema>;
 export function FormHome() {
@@ -51,7 +52,7 @@ export function FormHome() {
     emailjs.sendForm(process.env.NEXT_PUBLIC_SERVICE_ID || "", process.env.NEXT_PUBLIC_TEMPLATE_ID || "", formElement, process.env.NEXT_PUBLIC_PUBLIC_KEY || "").then(
       (result) => {
         console.log(result.text);
-        confirm("Confirmado");
+        toast.success("Mensagem enviada com sucesso!");
         reset();
       },
       (error) => {

@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { footerFormSchema } from "@/lib/validations/form-footer";
 
 import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
 
 type FormValues = z.infer<typeof footerFormSchema>;
 export function FormFooter() {
@@ -28,7 +29,7 @@ export function FormFooter() {
     emailjs.sendForm(process.env.NEXT_PUBLIC_SERVICE_ID || "", process.env.NEXT_PUBLIC_TEMPLATE_ID2 || "", formElement, process.env.NEXT_PUBLIC_PUBLIC_KEY || "").then(
       (result) => {
         console.log(result.text);
-        confirm("Confirmado");
+        toast.success("Email Cadastrado com sucesso!");
         reset();
       },
       (error) => {
