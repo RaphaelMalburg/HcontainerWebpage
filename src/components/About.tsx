@@ -16,7 +16,7 @@ const About = () => {
       />{" "}
       <div className="bg-primary-blue text-primary-blue-100  p-8 md:-translate-x-14 md:col-start-4 md:w-[350px] w-full rounded-md ">
         <h1 className="text-4xl font-bold">Sobre nós</h1>
-        <p className="text-md mt-5">
+        <p className="text-md mt-5 mb-10">
           A <span className=" font-extrabold">HContainers</span> é uma empresa que atua no ramo de containers marítimos, com o objetivo de oferecer soluções para o mercado de
           construção civil, comércio e indústria.
           <br />
@@ -27,7 +27,7 @@ const About = () => {
           href={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-primary-blue-100 text-primary-blue rounded-md mt-10  px-6 py-4">
+          className="bg-primary-blue-100 text-primary-blue rounded-md mt-10  px-6 py-4 ">
           Faça um orçamento
         </a>
       </div>
