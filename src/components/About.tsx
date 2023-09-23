@@ -2,6 +2,9 @@ import Image from "next/image";
 import React from "react";
 
 const About = () => {
+  const phoneNumber = "554799977116";
+  const defaultMessage = "Olá, gostaria de saber mais sobre os projetos de containers.";
+  const encodedMessage = encodeURIComponent(defaultMessage);
   return (
     <section id="about" className="w-full h-fit pt-10 relative padding-x grid md:grid-cols-5  justify-center items-end padding-x ">
       <Image
@@ -20,7 +23,13 @@ const About = () => {
           <br />
           Nossa empresa conta com uma equipe de profissionais capacitados para atender as necessidades dos nossos clientes, com qualidade e agilidade.
         </p>
-        <button className="bg-primary-blue-100 text-primary-blue rounded-md mt-10  px-6 py-4">Faça um orçamento</button>
+        <a
+          href={`https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-primary-blue-100 text-primary-blue rounded-md mt-10  px-6 py-4">
+          Faça um orçamento
+        </a>
       </div>
     </section>
   );

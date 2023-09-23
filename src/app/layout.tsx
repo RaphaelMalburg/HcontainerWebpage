@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="relative">
+      <body className="relative  dark:bg-black-100">
         <NavBar />
         {children}
         <ToastContainer position="top-right" autoClose={3000} />

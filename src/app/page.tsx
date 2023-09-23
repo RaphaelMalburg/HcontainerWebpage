@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className=" overflow-x-hidden dark:bg-black-100 transition-all ease-in-out duration-300">
+    <main className=" overflow-x-hidden dark:bg-black-100 bg-slate-100 transition-all ease-in-out duration-300">
       <Hero />
       <ContainerTypes />
       <About />
