@@ -14,7 +14,7 @@ const CardContainer = ({ title, description, src }: CardContainerProps) => {
       <Image src={src} height={40} width={40} alt="dry" />
       <h2 className="font-extrabold text-black-100 dark:text-primary-blue-100">{title}</h2>
       <p className="text-black-100 dark:text-primary-blue-100">{description}</p>
-      <Link href={"/"}>
+      <Link href={"/projetos"}>
         <button className="bg-black-100 dark:bg-primary-blue-100 text-white dark:text-black-100 rounded-md mt-4 px-6 py-2">Saiba Mais</button>
       </Link>
     </div>
